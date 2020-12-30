@@ -1,0 +1,9 @@
+task groovy {}
+
+def doubleIt = {x -> x + x}
+
+def filterVery = {word -> word=="very" ? doubleIt(word) : word}
+
+def myList = ["Closures", "are", "very", "awesome"];
+
+myList.each{println(filterVery("$it"))}
